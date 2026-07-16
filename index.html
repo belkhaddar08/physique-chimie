@@ -393,25 +393,70 @@
         }
 
         /* ===== DOWNLOAD BUTTONS ===== */
+        .chapter-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
         .download-btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background: var(--accent);
-            color: white;
-            padding: 10px 20px;
+            gap: 6px;
+            padding: 10px 18px;
             border-radius: 10px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
+            white-space: nowrap;
         }
 
         .download-btn:hover {
             transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-cours {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+        }
+
+        .btn-cours:hover {
+            box-shadow: 0 5px 20px rgba(52,152,219,0.4);
+        }
+
+        .btn-activites {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            color: white;
+        }
+
+        .btn-activites:hover {
+            box-shadow: 0 5px 20px rgba(155,89,182,0.4);
+        }
+
+        .btn-exercices {
+            background: linear-gradient(135deg, #e67e22, #d35400);
+            color: white;
+        }
+
+        .btn-exercices:hover {
             box-shadow: 0 5px 20px rgba(230,126,34,0.4);
+        }
+
+        .download-btn.disabled {
+            background: #bdc3c7;
+            color: #7f8c8d;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .download-btn.disabled:hover {
+            transform: none;
+            box-shadow: none;
         }
 
         /* ===== FOOTER ===== */
@@ -563,18 +608,12 @@
                     <div class="chapter-info">
                         <div class="chapter-title">La Lumière</div>
                         <div class="chapter-meta">Nature de la lumière • Réflexion • Réfraction • Lentilles</div>
-                        
-                 </div>
-                    <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn">📥 serie 1</a>
-                </div>
-                     </div>
-                    <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn">📥 serie 1</a>
-                </div>
-             </div>
-                    <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn">📥 serie 1</a>
-                </div>
-         </div>
-                    <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn">📥 serie 1</a>
+                    </div>
+                    <div class="chapter-actions">
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-cours">📘 Cours</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-activites">📝 Activités</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-exercices">📐 Série d'exercices</a>
+                    </div>
                 </div>
                 <div class="chapter-item">
                     <div class="chapter-number">2</div>
@@ -582,7 +621,11 @@
                         <div class="chapter-title">Les Circuits Électriques</div>
                         <div class="chapter-meta">Courant électrique • Tension • Résistance • Lois d'Ohm</div>
                     </div>
-                    <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn">📥 Télécharger</a>
+                    <div class="chapter-actions">
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-cours">📘 Cours</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-activites">📝 Activités</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-exercices">📐 Série d'exercices</a>
+                    </div>
                 </div>
                 <div class="chapter-item">
                     <div class="chapter-number">3</div>
@@ -590,7 +633,11 @@
                         <div class="chapter-title">Les Transformations Chimiques</div>
                         <div class="chapter-meta">Réactions chimiques • Conservation de la masse • Équations</div>
                     </div>
-                    <span class="chapter-status status-soon">⏳ Bientôt</span>
+                    <div class="chapter-actions">
+                        <span class="download-btn btn-cours disabled">📘 Cours</span>
+                        <span class="download-btn btn-activites disabled">📝 Activités</span>
+                        <span class="download-btn btn-exercices disabled">📐 Série d'exercices</span>
+                    </div>
                 </div>
                 <div class="chapter-item">
                     <div class="chapter-number">4</div>
@@ -598,7 +645,11 @@
                         <div class="chapter-title">La Mécanique</div>
                         <div class="chapter-meta">Mouvement • Vitesse • Forces • Équilibre</div>
                     </div>
-                    <span class="chapter-status status-soon">⏳ Bientôt</span>
+                    <div class="chapter-actions">
+                        <span class="download-btn btn-cours disabled">📘 Cours</span>
+                        <span class="download-btn btn-activites disabled">📝 Activités</span>
+                        <span class="download-btn btn-exercices disabled">📐 Série d'exercices</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -611,7 +662,11 @@
                         <div class="chapter-title">Classification Périodique des Éléments</div>
                         <div class="chapter-meta">Tableau de Mendeleïev • Familles chimiques • Propriétés périodiques</div>
                     </div>
-                    <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn">📥 Télécharger</a>
+                    <div class="chapter-actions">
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-cours">📘 Cours</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-activites">📝 Activités</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-exercices">📐 Série d'exercices</a>
+                    </div>
                 </div>
                 <div class="chapter-item">
                     <div class="chapter-number">2</div>
@@ -619,7 +674,11 @@
                         <div class="chapter-title">La Structure de l'Atome</div>
                         <div class="chapter-meta">Modèle de Bohr • Nombre quantique • Configuration électronique</div>
                     </div>
-                    <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn">📥 Télécharger</a>
+                    <div class="chapter-actions">
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-cours">📘 Cours</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-activites">📝 Activités</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-exercices">📐 Série d'exercices</a>
+                    </div>
                 </div>
                 <div class="chapter-item">
                     <div class="chapter-number">3</div>
@@ -627,7 +686,11 @@
                         <div class="chapter-title">Les Solutions Électrolytiques</div>
                         <div class="chapter-meta">Conductivité • Ions • Réactions acido-basiques • pH</div>
                     </div>
-                    <span class="chapter-status status-soon">⏳ Bientôt</span>
+                    <div class="chapter-actions">
+                        <span class="download-btn btn-cours disabled">📘 Cours</span>
+                        <span class="download-btn btn-activites disabled">📝 Activités</span>
+                        <span class="download-btn btn-exercices disabled">📐 Série d'exercices</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -653,7 +716,11 @@
                         <div class="chapter-title">Les Ondes Mécaniques Progressives</div>
                         <div class="chapter-meta">Propagation • Vitesse • Réflexion • Réfraction des ondes</div>
                     </div>
-                    <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn">📥 Télécharger</a>
+                    <div class="chapter-actions">
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-cours">📘 Cours</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-activites">📝 Activités</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-exercices">📐 Série d'exercices</a>
+                    </div>
                 </div>
                 <div class="chapter-item">
                     <div class="chapter-number">2</div>
@@ -661,7 +728,11 @@
                         <div class="chapter-title">Les Ondes Mécaniques Périodiques</div>
                         <div class="chapter-meta">Période • Fréquence • Longueur d'onde • Ondes stationnaires</div>
                     </div>
-                    <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn">📥 Télécharger</a>
+                    <div class="chapter-actions">
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-cours">📘 Cours</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-activites">📝 Activités</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-exercices">📐 Série d'exercices</a>
+                    </div>
                 </div>
                 <div class="chapter-item">
                     <div class="chapter-number">3</div>
@@ -669,7 +740,11 @@
                         <div class="chapter-title">Les Ondes Lumineuses</div>
                         <div class="chapter-meta">Diffraction • Interférences • Spectres • Couleurs</div>
                     </div>
-                    <span class="chapter-status status-soon">⏳ Bientôt</span>
+                    <div class="chapter-actions">
+                        <span class="download-btn btn-cours disabled">📘 Cours</span>
+                        <span class="download-btn btn-activites disabled">📝 Activités</span>
+                        <span class="download-btn btn-exercices disabled">📐 Série d'exercices</span>
+                    </div>
                 </div>
                 <div class="chapter-item">
                     <div class="chapter-number">4</div>
@@ -677,7 +752,11 @@
                         <div class="chapter-title">La Radioactivité</div>
                         <div class="chapter-meta">Noyau atomique • Désintégration • Demi-vie • Applications</div>
                     </div>
-                    <span class="chapter-status status-soon">⏳ Bientôt</span>
+                    <div class="chapter-actions">
+                        <span class="download-btn btn-cours disabled">📘 Cours</span>
+                        <span class="download-btn btn-activites disabled">📝 Activités</span>
+                        <span class="download-btn btn-exercices disabled">📐 Série d'exercices</span>
+                    </div>
                 </div>
                 <div class="chapter-item">
                     <div class="chapter-number">5</div>
@@ -685,7 +764,11 @@
                         <div class="chapter-title">La Force Électromagnétique</div>
                         <div class="chapter-meta">Champ magnétique • Force de Laplace • Induction électromagnétique</div>
                     </div>
-                    <span class="chapter-status status-soon">⏳ Bientôt</span>
+                    <div class="chapter-actions">
+                        <span class="download-btn btn-cours disabled">📘 Cours</span>
+                        <span class="download-btn btn-activites disabled">📝 Activités</span>
+                        <span class="download-btn btn-exercices disabled">📐 Série d'exercices</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -698,7 +781,11 @@
                         <div class="chapter-title">Les Réactions Acido-Basiques</div>
                         <div class="chapter-meta">Couples acide/base • pH • Titrage acido-basique • Indicateurs</div>
                     </div>
-                    <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn">📥 Télécharger</a>
+                    <div class="chapter-actions">
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-cours">📘 Cours</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-activites">📝 Activités</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-exercices">📐 Série d'exercices</a>
+                    </div>
                 </div>
                 <div class="chapter-item">
                     <div class="chapter-number">2</div>
@@ -706,7 +793,11 @@
                         <div class="chapter-title">Les Réactions d'Oxydoréduction</div>
                         <div class="chapter-meta">Nombre d'oxydation • Pile électrochimique • Électrolyse</div>
                     </div>
-                    <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn">📥 Télécharger</a>
+                    <div class="chapter-actions">
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-cours">📘 Cours</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-activites">📝 Activités</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-exercices">📐 Série d'exercices</a>
+                    </div>
                 </div>
                 <div class="chapter-item">
                     <div class="chapter-number">3</div>
@@ -714,7 +805,11 @@
                         <div class="chapter-title">La Transformation Chimique</div>
                         <div class="chapter-meta">Avancement • Tableau d'avancement • Réaction totale/limitée</div>
                     </div>
-                    <span class="chapter-status status-soon">⏳ Bientôt</span>
+                    <div class="chapter-actions">
+                        <span class="download-btn btn-cours disabled">📘 Cours</span>
+                        <span class="download-btn btn-activites disabled">📝 Activités</span>
+                        <span class="download-btn btn-exercices disabled">📐 Série d'exercices</span>
+                    </div>
                 </div>
                 <div class="chapter-item">
                     <div class="chapter-number">4</div>
@@ -722,7 +817,11 @@
                         <div class="chapter-title">Les Réactions de Précipitation</div>
                         <div class="chapter-meta">Produit de solubilité • Précipitation sélective • Dosage</div>
                     </div>
-                    <span class="chapter-status status-soon">⏳ Bientôt</span>
+                    <div class="chapter-actions">
+                        <span class="download-btn btn-cours disabled">📘 Cours</span>
+                        <span class="download-btn btn-activites disabled">📝 Activités</span>
+                        <span class="download-btn btn-exercices disabled">📐 Série d'exercices</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -748,7 +847,11 @@
                         <div class="chapter-title">Dipôle RC</div>
                         <div class="chapter-meta">Condensateur • Charge/décharge • Constante de temps • Oscilloscope</div>
                     </div>
-                    <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn">📥 Télécharger</a>
+                    <div class="chapter-actions">
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-cours">📘 Cours</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-activites">📝 Activités</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-exercices">📐 Série d'exercices</a>
+                    </div>
                 </div>
                 <div class="chapter-item">
                     <div class="chapter-number">2</div>
@@ -756,7 +859,11 @@
                         <div class="chapter-title">Dipôle RL</div>
                         <div class="chapter-meta">Bobine • Auto-induction • Énergie magnétique • Régime transitoire</div>
                     </div>
-                    <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn">📥 Télécharger</a>
+                    <div class="chapter-actions">
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-cours">📘 Cours</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-activites">📝 Activités</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-exercices">📐 Série d'exercices</a>
+                    </div>
                 </div>
                 <div class="chapter-item">
                     <div class="chapter-number">3</div>
@@ -764,7 +871,11 @@
                         <div class="chapter-title">Circuit RLC Série</div>
                         <div class="chapter-meta">Oscillations libres • Oscillations forcées • Résonance</div>
                     </div>
-                    <span class="chapter-status status-soon">⏳ Bientôt</span>
+                    <div class="chapter-actions">
+                        <span class="download-btn btn-cours disabled">📘 Cours</span>
+                        <span class="download-btn btn-activites disabled">📝 Activités</span>
+                        <span class="download-btn btn-exercices disabled">📐 Série d'exercices</span>
+                    </div>
                 </div>
                 <div class="chapter-item">
                     <div class="chapter-number">4</div>
@@ -772,7 +883,11 @@
                         <div class="chapter-title">Les Ondes Électromagnétiques</div>
                         <div class="chapter-meta">Spectre EM • Équation de propagation • Énergie • Applications</div>
                     </div>
-                    <span class="chapter-status status-soon">⏳ Bientôt</span>
+                    <div class="chapter-actions">
+                        <span class="download-btn btn-cours disabled">📘 Cours</span>
+                        <span class="download-btn btn-activites disabled">📝 Activités</span>
+                        <span class="download-btn btn-exercices disabled">📐 Série d'exercices</span>
+                    </div>
                 </div>
                 <div class="chapter-item">
                     <div class="chapter-number">5</div>
@@ -780,7 +895,11 @@
                         <div class="chapter-title">Mécanique des Fluides</div>
                         <div class="chapter-meta">Pression • Théorème de Bernoulli • Écoulement • Viscosité</div>
                     </div>
-                    <span class="chapter-status status-soon">⏳ Bientôt</span>
+                    <div class="chapter-actions">
+                        <span class="download-btn btn-cours disabled">📘 Cours</span>
+                        <span class="download-btn btn-activites disabled">📝 Activités</span>
+                        <span class="download-btn btn-exercices disabled">📐 Série d'exercices</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -793,7 +912,11 @@
                         <div class="chapter-title">Évolution Spontanée d'un Système Chimique</div>
                         <div class="chapter-meta">Quotient de réaction • Constante d'équilibre • Critère d'évolution</div>
                     </div>
-                    <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn">📥 Télécharger</a>
+                    <div class="chapter-actions">
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-cours">📘 Cours</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-activites">📝 Activités</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-exercices">📐 Série d'exercices</a>
+                    </div>
                 </div>
                 <div class="chapter-item">
                     <div class="chapter-number">2</div>
@@ -801,7 +924,11 @@
                         <div class="chapter-title">Force des Acides et des Bases</div>
                         <div class="chapter-meta">pKa • Domaine de prédominance • Couples forts/faibles</div>
                     </div>
-                    <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn">📥 Télécharger</a>
+                    <div class="chapter-actions">
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-cours">📘 Cours</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-activites">📝 Activités</a>
+                        <a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" target="_blank" class="download-btn btn-exercices">📐 Série d'exercices</a>
+                    </div>
                 </div>
                 <div class="chapter-item">
                     <div class="chapter-number">3</div>
@@ -809,7 +936,11 @@
                         <div class="chapter-title">Réactions de Précipitation</div>
                         <div class="chapter-meta">Produit de solubilité Ks • Précipitation • Complexation</div>
                     </div>
-                    <span class="chapter-status status-soon">⏳ Bientôt</span>
+                    <div class="chapter-actions">
+                        <span class="download-btn btn-cours disabled">📘 Cours</span>
+                        <span class="download-btn btn-activites disabled">📝 Activités</span>
+                        <span class="download-btn btn-exercices disabled">📐 Série d'exercices</span>
+                    </div>
                 </div>
                 <div class="chapter-item">
                     <div class="chapter-number">4</div>
@@ -817,7 +948,11 @@
                         <div class="chapter-title">Les Réactions d'Oxydoréduction</div>
                         <div class="chapter-meta">Piles • Accumulateurs • Électrolyse industrielle • Corrosion</div>
                     </div>
-                    <span class="chapter-status status-soon">⏳ Bientôt</span>
+                    <div class="chapter-actions">
+                        <span class="download-btn btn-cours disabled">📘 Cours</span>
+                        <span class="download-btn btn-activites disabled">📝 Activités</span>
+                        <span class="download-btn btn-exercices disabled">📐 Série d'exercices</span>
+                    </div>
                 </div>
             </div>
         </div>
